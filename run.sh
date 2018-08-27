@@ -1,6 +1,6 @@
 #!/bin/bash -x
 function cleanup {
-    cp -vf /tmp/pkg/*.tar.* /pkg
+    cp -vf /tmp/pkg/*.tar.xz /pkg
 }
 trap cleanup EXIT
 # Make a copy so we never alter the original
