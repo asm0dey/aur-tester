@@ -20,4 +20,4 @@ cd /tmp/pkg
     sudo -u notroot yay -Syu --noconfirm && sudo -u notroot yay -S --noconfirm --needed "${depends[@]}" "${makedepends[@]}"
     set +x
 )
-sudo -u notroot makepkg -fs --noconfirm
+sudo -u notroot makepkg -fsi --noconfirm
