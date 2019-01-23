@@ -21,7 +21,9 @@ RUN useradd -m notroot && \
     cd yay && \
     sudo -u notroot makepkg -si --noconfirm && \
     cd .. && \
-    sudo -u notroot rm -rf yay
+    sudo -u notroot rm -rf yay && \
+    pacman -S --noconfirm reflector && \
+    reflector --country Russia --sort rate --save /etc/pacman.d/mirrorlist
 
 WORKDIR /pkg
 CMD /bin/sh /run.sh
