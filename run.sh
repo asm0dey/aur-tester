@@ -15,8 +15,6 @@ find /tmp/pkg -type d -exec chmod u+x {} \;
 # Do the actual building
 cd /tmp/pkg
 (
-    pwd
-    ls -lah
     . ./PKGBUILD
     sudo -u notroot yay -Syu --noconfirm && sudo -u notroot yay -S --noconfirm --needed "${depends[@]}" "${makedepends[@]}"
 )
