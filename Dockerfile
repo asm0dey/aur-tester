@@ -1,4 +1,4 @@
-FROM base/archlinux
+FROM archlinux/base
 LABEL maintainer="pavel.finkelshtein@gmail.com" \
       org.label-schema.name="aur-tester" \
       org.label-schema.description="Image for testing packages, intended to be published in AUR" \
